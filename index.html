@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f3f1eb" />
+  <meta name="description" content="Albilad Holding Company — Saudi industrial solutions across logistics, transportation, heavy equipment rental, crane services and industrial supply." />
+  <title>Albilad Holding Company — Industrial Capability. Reliable Delivery.</title>
+
+  <!-- Editorial sans similar in spirit to the reference site's contemporary, airy typography. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+:root {
+  --paper: #f2f0e9;
+  --paper-2: #e7e4db;
+  --ink: #171815;
+  --muted: #676962;
+  --line: rgba(23,24,21,.14);
+  --soft: rgba(23,24,21,.08);
+  --dark: #171815;
+  --cream: #f6f4ed;
+  --accent: #b95737;
+  --max: 1360px;
+  --gutter: 28px;
+  --ease: cubic-bezier(.22,.72,.18,1);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Manrope", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+body.menu-open { overflow: hidden; }
+img { display:block; width:100%; }
+a { color:inherit; text-decoration:none; }
+button,input,textarea,select { font: inherit; }
+button { cursor:pointer; }
+
+.wrap {
+  width: min(calc(100% - (var(--gutter) * 2)), var(--max));
+  margin-inline: auto;
+}
+
+h1,h2,h3,p { margin-top:0; }
+h1,h2,h3 { font-family:"Manrope",Arial,sans-serif; font-weight:700; letter-spacing:-.04em; }
+p { margin-bottom:0; }
+
+.display {
+  font-size: clamp(3.5rem, 7.25vw, 7.5rem);
+  line-height: .9;
+  letter-spacing: -.065em;
+  max-width: 8.5ch;
+}
+.big-title {
+  font-size: clamp(2.7rem, 5.15vw, 5.25rem);
+  line-height: .94;
+  letter-spacing: -.055em;
+  max-width: 10ch;
+}
+.medium-title {
+  font-size: clamp(2rem, 3.6vw, 3.65rem);
+  line-height: .98;
+  letter-spacing: -.05em;
+}
+.body-lg { font-size: clamp(1rem, 1.25vw, 1.18rem); line-height:1.5; }
+.muted { color:var(--muted); }
+
+.eyebrow {
+  margin-bottom: 12px;
+  font-size: 10px;
+  line-height:1.2;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+.section-label {
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:20px;
+  padding-bottom:12px;
+  border-bottom:1px solid var(--line);
+}
+.section-label .num { font-size:10px; color:var(--muted); letter-spacing:.08em; }
+.dark-line { border-color:rgba(246,244,237,.16); }
+.dark-muted { color:rgba(246,244,237,.48); }
+
+/* Header */
+.site-header {
+  position:fixed;
+  inset:0 0 auto;
+  z-index:100;
+  padding:16px 0;
+  transition:transform .38s var(--ease), background .3s ease, border-color .3s ease;
+  border-bottom:1px solid transparent;
+}
+.site-header.scrolled {
+  background:rgba(242,240,233,.9);
+  backdrop-filter:blur(12px);
+  border-color:var(--soft);
+}
+.nav {
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  gap:20px;
+  align-items:center;
+}
+.brand {
+  display:inline-flex;
+  flex-direction:column;
+  width:max-content;
+  font-weight:800;
+  font-size:1rem;
+  line-height:.9;
+  letter-spacing:.12em;
+}
+.brand small {
+  margin-top:6px;
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:.25em;
+  opacity:.58;
+}
+.nav-center { display:flex; align-items:center; gap:22px; }
+.nav-center a { font-size:11px; color:rgba(23,24,21,.72); }
+.nav-center a:hover { color:var(--ink); }
+.nav-actions { display:flex; justify-content:flex-end; align-items:center; gap:9px; }
+.lang-btn,.menu-btn {
+  min-height:40px;
+  padding:0 12px;
+  border:1px solid var(--line);
+  background:transparent;
+  color:var(--ink);
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+.menu-btn { display:none; gap:8px; align-items:center; }
+.menu-dot { width:5px; height:5px; border-radius:50%; background:var(--accent); }
+.outline-link {
+  min-height:42px;
+  padding:0 14px;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  border:1px solid currentColor;
+  font-size:10px;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+.outline-link::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:currentColor;
+  opacity:.07;
+  transform:translateY(102%);
+  transition:transform .35s var(--ease);
+  z-index:-1;
+}
+.outline-link:hover::before { transform:translateY(0); }
+.arrow { line-height:1; font-size:13px; }
+
+/* Full menu */
+.menu-panel {
+  position:fixed;
+  inset:0;
+  z-index:90;
+  background:var(--dark);
+  color:var(--cream);
+  display:grid;
+  align-items:end;
+  padding:100px var(--gutter) 24px;
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(-100%);
+  transition:opacity .3s ease, transform .55s var(--ease);
+}
+.menu-panel.open { opacity:1; pointer-events:auto; transform:translateY(0); }
+.menu-inner { width:min(100%,var(--max)); margin:0 auto; display:grid; gap:30px; }
+.menu-links { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }
+.menu-links a {
+  padding:10px 0;
+  border-bottom:1px solid rgba(246,244,237,.12);
+  font-size:clamp(1.8rem,4vw,4rem);
+  line-height:.94;
+  letter-spacing:-.055em;
+}
+.menu-foot { display:flex; justify-content:space-between; gap:20px; color:rgba(246,244,237,.48); font-size:11px; }
+
+/* Hero */
+.hero {
+  min-height:94svh;
+  padding:118px 0 44px;
+  display:flex;
+  align-items:flex-end;
+}
+.hero-grid {
+  width:100%;
+  display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  gap:18px;
+  align-items:end;
+}
+.hero-kicker { grid-column:1 / span 3; align-self:start; padding-top:4px; }
+.hero-kicker p:last-child { max-width:220px; font-size:12px; line-height:1.52; color:var(--muted); }
+.hero-title { grid-column:1 / span 8; }
+.hero-title .line { display:block; overflow:hidden; }
+.hero-title .line > span { display:inline-block; transform:translateY(104%); transition:transform .95s var(--ease); }
+body.loaded .hero-title .line > span { transform:translateY(0); }
+body.loaded .hero-title .line:nth-child(1) > span { transition-delay:.08s; }
+body.loaded .hero-title .line:nth-child(2) > span { transition-delay:.16s; }
+body.loaded .hero-title .line:nth-child(3) > span { transition-delay:.24s; }
+body.loaded .hero-title .line:nth-child(4) > span { transition-delay:.32s; }
+.hero-title .accent { color:var(--accent); }
+.hero-side { grid-column:10 / -1; justify-self:end; max-width:210px; text-align:right; }
+.hero-side p { font-size:12px; line-height:1.52; color:var(--muted); margin-bottom:16px; }
+.hero-media {
+  grid-column:5 / -1;
+  margin:8px 0 0;
+  aspect-ratio:1.8 / 1;
+  position:relative;
+  overflow:hidden;
+  background:#252823;
+}
+.hero-media img { height:100%; object-fit:cover; filter:saturate(.74) contrast(1.04); transform:scale(1.045); transition:transform 1.4s var(--ease); }
+.hero-media::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.18)); pointer-events:none; }
+.hero-caption { grid-column:1 / span 3; font-size:10px; line-height:1.45; color:var(--muted); }
+.scroll-hint { grid-column:5 / span 2; font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.12em; }
+
+/* Marquee */
+.marquee { overflow:hidden; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.marquee-track { width:max-content; display:flex; animation:marquee 30s linear infinite; }
+.marquee span { display:flex; align-items:center; gap:24px; padding:10px 24px 10px 0; white-space:nowrap; font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+.marquee i { width:5px; height:5px; border-radius:50%; background:var(--accent); }
+@keyframes marquee { to { transform:translateX(-50%); } }
+
+/* Intro */
+.intro { padding:86px 0 92px; }
+.intro-grid {
+  display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  gap:18px;
+  align-items:start;
+}
+.intro-label { grid-column:1 / span 2; }
+.intro-copy { grid-column:4 / span 7; }
+.intro-copy p { margin:0; max-width:760px; font-size:clamp(1.55rem,2.75vw,2.9rem); line-height:1.03; letter-spacing:-.045em; }
+.intro-small { grid-column:10 / -1; padding-top:36px; }
+.intro-small p { font-size:12px; line-height:1.55; color:var(--muted); }
+
+/* Business */
+.section-dark { background:var(--dark); color:var(--cream); }
+.business { padding:32px 0 96px; }
+.business-top {
+  margin-top:34px;
+  display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  gap:18px;
+  align-items:end;
+}
+.business-heading { grid-column:1 / span 7; }
+.business-heading h2 { margin:0; }
+.business-note { grid-column:9 / -1; font-size:12px; line-height:1.55; color:rgba(246,244,237,.54); }
+.business-list { margin-top:58px; border-top:1px solid rgba(246,244,237,.14); }
+.business-item {
+  display:grid;
+  grid-template-columns:48px minmax(0,1fr) 1fr 26px;
+  gap:18px;
+  align-items:center;
+  padding:20px 0;
+  border-bottom:1px solid rgba(246,244,237,.14);
+  transition:padding .3s var(--ease), background .3s ease;
+}
+.business-item:hover { padding-inline:10px; background:rgba(246,244,237,.035); }
+.business-item .num { font-size:10px; color:rgba(246,244,237,.42); }
+.business-item h3 { margin:0; font-size:clamp(1.2rem,2.1vw,2.2rem); line-height:1; }
+.business-item p { margin:0; max-width:390px; font-size:11px; line-height:1.48; color:rgba(246,244,237,.5); }
+.business-item .go { text-align:right; font-size:17px; transition:transform .3s var(--ease); }
+.business-item:hover .go { transform:translateX(4px); }
+
+/* Equipment / editorial */
+.editorial { padding:92px 0 108px; }
+.editorial-grid {
+  display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  gap:18px;
+  align-items:start;
+}
+.editorial-copy { grid-column:1 / span 5; padding-top:6px; }
+.editorial-copy h2 { margin:0; }
+.editorial-copy p { max-width:360px; margin:22px 0 18px; font-size:12px; line-height:1.6; color:var(--muted); }
+.editorial-visuals { grid-column:7 / -1; display:grid; gap:28px; }
+.visual-card { margin:0; }
+.visual-card img { aspect-ratio:1.42 / 1; object-fit:cover; background:#d4d0c7; filter:saturate(.72) contrast(1.03); transition:transform 1s var(--ease); }
+.visual-card.wide img { aspect-ratio:1.78 / 1; }
+.visual-card:hover img { transform:scale(1.025); }
+.visual-meta { display:flex; justify-content:space-between; gap:20px; padding-top:9px; font-size:9px; text-transform:uppercase; letter-spacing:.08em; }
+.visual-meta span:last-child { color:var(--muted); }
+
+/* Capabilities */
+.capabilities { padding:32px 0 106px; }
+.cap-grid {
+  display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  gap:18px;
+  margin-top:34px;
+}
+.cap-title { grid-column:1 / span 5; }
+.cap-title h2 { margin:0; }
+.cap-list { grid-column:7 / -1; }
+.cap-row {
+  display:grid;
+  grid-template-columns:34px minmax(0,1fr) 24px;
+  gap:14px;
+  align-items:center;
+  padding:15px 0;
+  border-top:1px solid var(--line);
+}
+.cap-row:last-child { border-bottom:1px solid var(--line); }
+.cap-row .number { font-size:9px; color:var(--muted); }
+.cap-row h3 { margin:0; font-size:14px; line-height:1.2; letter-spacing:-.015em; }
+.cap-row .icon { text-align:right; font-size:14px; }
+
+/* Projects */
+.projects { padding:32px 0 104px; }
+.projects-intro {
+  margin-top:34px;
+  display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  gap:18px;
+  align-items:end;
+}
+.projects-intro h2 { grid-column:1 / span 7; margin:0; }
+.projects-intro p { grid-column:9 / -1; margin:0; font-size:12px; line-height:1.55; color:rgba(246,244,237,.52); }
+.projects-grid { margin-top:56px; display:grid; grid-template-columns:1.18fr .82fr; gap:26px; align-items:start; }
+.project { min-width:0; }
+.project:nth-child(2) { margin-top:92px; }
+.project-media { overflow:hidden; background:#2a2d28; }
+.project-media img { aspect-ratio:1.25/1; object-fit:cover; filter:saturate(.72) contrast(1.03); transition:transform 1s var(--ease); }
+.project:hover .project-media img { transform:scale(1.025); }
+.project-info { margin-top:10px; padding-top:10px; border-top:1px solid rgba(246,244,237,.14); display:grid; grid-template-columns:1fr auto; gap:18px; }
+.project-info h3 { margin:0; font-size:14px; letter-spacing:-.015em; }
+.project-info p { margin:4px 0 0; max-width:420px; font-size:10px; line-height:1.5; color:rgba(246,244,237,.48); }
+.project-tag { font-size:9px; color:rgba(246,244,237,.44); text-transform:uppercase; letter-spacing:.08em; }
+
+/* Safety */
+.safety { padding:32px 0 100px; background:var(--paper-2); }
+.safety-grid { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:18px; margin-top:34px; align-items:start; }
+.safety-copy { grid-column:1 / span 5; }
+.safety-copy h2 { margin:0; }
+.safety-copy p { max-width:500px; margin-top:22px; font-size:13px; line-height:1.58; color:var(--muted); }
+.safety-points { grid-column:7 / -1; }
+.safety-point { display:grid; grid-template-columns:30px 1fr; gap:12px; padding:16px 0; border-top:1px solid var(--line); }
+.safety-point:last-child { border-bottom:1px solid var(--line); }
+.safety-point .num { font-size:9px; color:var(--muted); }
+.safety-point h3 { margin:0 0 6px; font-size:15px; line-height:1.15; letter-spacing:-.02em; }
+.safety-point p { margin:0; font-size:11px; line-height:1.5; color:var(--muted); }
+
+/* Quote */
+.quote { padding:32px 0 100px; }
+.quote-grid { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:18px; margin-top:34px; align-items:start; }
+.quote-copy { grid-column:1 / span 5; }
+.quote-copy h2 { margin:0; }
+.quote-copy p { max-width:390px; margin-top:20px; font-size:12px; line-height:1.58; color:rgba(246,244,237,.5); }
+.quote-form { grid-column:7 / -1; }
+.form-grid { display:grid; grid-template-columns:1fr 1fr; gap:13px 18px; }
+.field { display:grid; gap:6px; }
+.field.full { grid-column:1 / -1; }
+.field label { font-size:9px; text-transform:uppercase; letter-spacing:.12em; color:rgba(246,244,237,.42); }
+.field input,.field textarea,.field select { width:100%; padding:10px 0; border:0; border-bottom:1px solid rgba(246,244,237,.18); background:transparent; color:var(--cream); outline:0; border-radius:0; }
+.field input:focus,.field textarea:focus,.field select:focus { border-color:rgba(246,244,237,.65); }
+.field textarea { min-height:84px; resize:vertical; }
+.field select option { color:#111; }
+.submit-row { margin-top:17px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+.submit-btn { min-height:44px; padding:0 16px; border:1px solid var(--cream); background:var(--cream); color:var(--ink); font-size:10px; letter-spacing:.09em; text-transform:uppercase; }
+.form-note { font-size:9px; line-height:1.4; color:rgba(246,244,237,.38); text-align:right; max-width:260px; }
+
+/* FAQ */
+.faq { padding:32px 0 96px; }
+.faq-grid { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:18px; margin-top:34px; align-items:start; }
+.faq-title { grid-column:1 / span 4; }
+.faq-title h2 { margin:0; }
+.faq-list { grid-column:6 / -1; border-top:1px solid var(--line); }
+.faq-item { border-bottom:1px solid var(--line); }
+.faq-q { width:100%; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:15px 0; border:0; background:transparent; color:inherit; text-align:left; font-size:12px; }
+.faq-q span:last-child { font-size:17px; transition:transform .3s var(--ease); }
+.faq-item.open .faq-q span:last-child { transform:rotate(45deg); }
+.faq-a { max-height:0; overflow:hidden; transition:max-height .35s var(--ease); }
+.faq-a p { max-width:600px; padding:0 0 15px; font-size:11px; line-height:1.55; color:var(--muted); }
+
+/* Footer */
+.footer { padding:32px 0 20px; background:var(--dark); color:var(--cream); }
+.footer-main { display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:26px; padding:52px 0 62px; }
+.footer-brand h2 { margin:0; max-width:7ch; font-size:clamp(2.8rem,5vw,5rem); line-height:.88; }
+.footer-brand p { max-width:280px; margin-top:16px; font-size:11px; line-height:1.55; color:rgba(246,244,237,.45); }
+.footer-col h3 { margin:0 0 12px; font-size:9px; color:rgba(246,244,237,.36); letter-spacing:.12em; text-transform:uppercase; }
+.footer-col a,.footer-col p { display:block; margin:0 0 7px; font-size:11px; line-height:1.45; }
+.footer-bottom { display:flex; justify-content:space-between; gap:20px; padding-top:12px; border-top:1px solid rgba(246,244,237,.14); font-size:9px; text-transform:uppercase; letter-spacing:.08em; color:rgba(246,244,237,.35); }
+
+/* Motion */
+[data-reveal] { opacity:0; transform:translateY(18px); transition:opacity .68s var(--ease), transform .68s var(--ease); }
+[data-reveal].is-visible { opacity:1; transform:none; }
+[data-reveal="image"] { opacity:1; transform:none; clip-path:inset(5% 3%); transition:clip-path .9s var(--ease), transform .9s var(--ease); }
+[data-reveal="image"].is-visible { clip-path:inset(0); }
+
+.cursor { position:fixed; left:0; top:0; width:9px; height:9px; transform:translate(-50%,-50%); border:1px solid var(--ink); border-radius:50%; pointer-events:none; z-index:300; opacity:0; transition:width .18s var(--ease),height .18s var(--ease),background .18s ease; }
+body.cursor-ready .cursor { opacity:1; }
+.cursor.large { width:34px; height:34px; background:rgba(23,24,21,.05); }
+
+@media (max-width: 980px) {
+  :root { --gutter:20px; }
+  .nav { grid-template-columns:1fr auto; }
+  .nav-center, .nav-actions > .outline-link { display:none; }
+  .menu-btn { display:inline-flex; }
+  .hero-grid,.intro-grid,.business-top,.editorial-grid,.cap-grid,.projects-intro,.safety-grid,.quote-grid,.faq-grid { grid-template-columns:repeat(6,minmax(0,1fr)); }
+  .hero-kicker { grid-column:1 / span 2; }
+  .hero-title { grid-column:1 / -1; }
+  .hero-side { grid-column:4 / -1; }
+  .hero-media { grid-column:2 / -1; }
+  .hero-caption { grid-column:1 / span 2; }
+  .scroll-hint { grid-column:3 / -1; }
+  .intro-label { grid-column:1; }
+  .intro-copy { grid-column:2 / -1; }
+  .intro-small { grid-column:2 / -1; padding-top:0; }
+  .business-heading { grid-column:1 / span 4; }
+  .business-note { grid-column:5 / -1; }
+  .editorial-copy { grid-column:1 / span 2; }
+  .editorial-visuals { grid-column:3 / -1; }
+  .cap-title { grid-column:1 / span 2; }
+  .cap-list { grid-column:3 / -1; }
+  .projects-intro h2 { grid-column:1 / span 4; }
+  .projects-intro p { grid-column:5 / -1; }
+  .safety-copy { grid-column:1 / span 2; }
+  .safety-points { grid-column:3 / -1; }
+  .quote-copy { grid-column:1 / span 2; }
+  .quote-form { grid-column:3 / -1; }
+  .faq-title { grid-column:1 / span 2; }
+  .faq-list { grid-column:3 / -1; }
+  .footer-main { grid-template-columns:1.3fr 1fr 1fr; }
+  .footer-brand { grid-row:span 2; }
+}
+
+@media (max-width: 700px) {
+  :root { --gutter:14px; }
+  html { scroll-padding-top:74px; }
+  .site-header { padding:11px 0; }
+  .hero { min-height:auto; padding:96px 0 28px; }
+  .hero-grid,.intro-grid,.business-top,.editorial-grid,.cap-grid,.projects-intro,.safety-grid,.quote-grid,.faq-grid { grid-template-columns:1fr; }
+  .hero-kicker,.hero-title,.hero-side,.hero-media,.hero-caption,.scroll-hint,
+  .intro-label,.intro-copy,.intro-small,.business-heading,.business-note,
+  .editorial-copy,.editorial-visuals,.cap-title,.cap-list,.projects-intro h2,.projects-intro p,
+  .safety-copy,.safety-points,.quote-copy,.quote-form,.faq-title,.faq-list { grid-column:1 / -1; }
+  .hero-kicker { order:1; }
+  .hero-title { order:2; }
+  .hero-side { order:3; justify-self:start; text-align:left; max-width:260px; }
+  .hero-media { order:4; margin-top:3px; aspect-ratio:1.28/1; }
+  .hero-caption { order:5; }
+  .scroll-hint { display:none; }
+  .display { font-size:clamp(3.3rem,16.5vw,5.3rem); max-width:8.2ch; }
+  .intro { padding:62px 0 68px; }
+  .intro-copy p { font-size:clamp(1.55rem,8vw,2.15rem); }
+  .intro-small { padding-top:0; }
+  .business,.editorial,.capabilities,.projects,.safety,.quote,.faq { padding-bottom:70px; }
+  .business { padding-top:28px; }
+  .business-top { margin-top:27px; }
+  .business-list { margin-top:38px; }
+  .business-item { grid-template-columns:28px 1fr 20px; gap:11px; padding:16px 0; }
+  .business-item h3 { font-size:1.12rem; }
+  .business-item p { grid-column:2 / -1; margin-top:3px; max-width:none; }
+  .business-item .go { grid-column:3; grid-row:1; }
+  .editorial { padding-top:64px; }
+  .editorial-copy { padding-bottom:4px; }
+  .editorial-visuals { gap:24px; }
+  .visual-card img,.visual-card.wide img { aspect-ratio:1.24/1; }
+  .capabilities { padding-top:28px; }
+  .cap-grid { margin-top:28px; }
+  .projects { padding-top:28px; }
+  .projects-grid { grid-template-columns:1fr; margin-top:40px; gap:30px; }
+  .project:nth-child(2) { margin-top:0; }
+  .project-media img { aspect-ratio:1.15/1; }
+  .safety { padding-top:28px; }
+  .safety-copy p { margin-top:16px; }
+  .quote { padding-top:28px; }
+  .form-grid { grid-template-columns:1fr; }
+  .field.full { grid-column:auto; }
+  .submit-row { flex-direction:column; align-items:flex-start; }
+  .form-note { text-align:left; max-width:320px; }
+  .faq { padding-top:28px; }
+  .faq-grid { margin-top:27px; }
+  .faq-title { padding-bottom:5px; }
+  .footer-main { grid-template-columns:1fr 1fr; gap:20px; padding:42px 0 48px; }
+  .footer-brand { grid-column:1 / -1; grid-row:auto; }
+  .footer-col:last-child { grid-column:1 / -1; }
+  .footer-bottom { flex-direction:column; gap:7px; }
+  .menu-links { grid-template-columns:1fr; }
+  .menu-links a { font-size:2.25rem; }
+  .menu-foot { flex-direction:column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+
+  <header class="site-header" id="header">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Albilad Holding home">
+        ALBILAD
+        <small>HOLDING COMPANY</small>
+      </a>
+
+      <nav class="nav-center" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#business">Business Areas</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="lang-btn" id="langBtn" type="button" aria-label="Switch language">EN / AR</button>
+        <a class="outline-link" href="#quote">Request a Quote <span class="arrow">↗</span></a>
+        <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menuPanel"><span class="menu-dot"></span> Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <aside class="menu-panel" id="menuPanel" aria-hidden="true">
+    <div class="menu-inner">
+      <nav class="menu-links">
+        <a href="#about">01 · About</a>
+        <a href="#business">02 · Business</a>
+        <a href="#capabilities">03 · Capabilities</a>
+        <a href="#projects">04 · Projects</a>
+        <a href="#safety">05 · Safety</a>
+        <a href="#contact">06 · Contact</a>
+      </nav>
+      <div class="menu-foot">
+        <span>Jeddah · Makkah Region · Saudi Arabia</span>
+        <span>+966 54 445 3748</span>
+      </div>
+    </div>
+  </aside>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-kicker" data-reveal>
+          <p class="eyebrow">Saudi Industrial Group</p>
+          <p>Logistics, transportation, equipment rental and industrial supply for demanding B2B environments.</p>
+        </div>
+
+        <div class="hero-title">
+          <h1 class="display">
+            <span class="line"><span>Industrial</span></span>
+            <span class="line"><span>capability.</span></span>
+            <span class="line"><span>Reliable</span></span>
+            <span class="line"><span class="accent">delivery.</span></span>
+          </h1>
+        </div>
+
+        <div class="hero-side" data-reveal>
+          <p>Built for projects where equipment, movement, timing and operational discipline have to work together.</p>
+          <a class="outline-link" href="#business">Explore capabilities <span class="arrow">↓</span></a>
+        </div>
+
+        <figure class="hero-media" data-reveal="image">
+          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=2200&q=88" alt="Industrial equipment operating at a project site" />
+        </figure>
+
+        <p class="hero-caption">Albilad Holding Company<br />Jeddah, Saudi Arabia</p>
+        <p class="scroll-hint">Scroll to explore ↓</p>
+      </div>
+    </section>
+
+    <div class="marquee" aria-label="Business capabilities">
+      <div class="marquee-track">
+        <span>Heavy Equipment Rental <i></i> Crane Rental <i></i> Logistics & Transportation <i></i> Industrial Supply <i></i> Forklift <i></i> Boom Truck <i></i> Fuel & Water Supply <i></i></span>
+        <span>Heavy Equipment Rental <i></i> Crane Rental <i></i> Logistics & Transportation <i></i> Industrial Supply <i></i> Forklift <i></i> Boom Truck <i></i> Fuel & Water Supply <i></i></span>
+      </div>
+    </div>
+
+    <section class="intro" id="about">
+      <div class="wrap intro-grid">
+        <div class="intro-label" data-reveal>
+          <p class="eyebrow">01 / About</p>
+        </div>
+        <div class="intro-copy" data-reveal>
+          <p>Albilad Holding Company is a Saudi business group focused on <span class="muted">logistics, transportation, heavy equipment rental, building materials trading and equipment spare parts</span>, with an operating mindset built around quality, safety and long-term partnerships.</p>
+        </div>
+        <div class="intro-small" data-reveal>
+          <p>Headquartered in Jeddah, the group is structured to support project teams and procurement functions with practical, dependable industrial services.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark business" id="business">
+      <div class="wrap">
+        <div class="section-label dark-line">
+          <span class="eyebrow dark-muted">02 / Business Areas</span>
+          <span class="num dark-muted">01—10</span>
+        </div>
+
+        <div class="business-top">
+          <div class="business-heading" data-reveal>
+            <h2 class="big-title">A broader industrial ecosystem.</h2>
+          </div>
+          <p class="business-note" data-reveal>Albilad’s public business profile spans logistics and transportation, equipment rental and a wider set of industrial support services. The structure below is intentionally flexible for future brand architecture.</p>
+        </div>
+
+        <div class="business-list">
+          <a class="business-item" href="#quote" data-reveal>
+            <span class="num">01</span>
+            <h3>Logistics & Transportation</h3>
+            <p>Goods transportation and logistics support for project and commercial requirements.</p>
+            <span class="go">↗</span>
+          </a>
+          <a class="business-item" href="#quote" data-reveal>
+            <span class="num">02</span>
+            <h3>Heavy Equipment Rental</h3>
+            <p>Equipment rental for demanding construction, infrastructure and industrial environments.</p>
+            <span class="go">↗</span>
+          </a>
+          <a class="business-item" href="#quote" data-reveal>
+            <span class="num">03</span>
+            <h3>Crane Rental</h3>
+            <p>Mobile crane and lifting support presented around real project needs and site conditions.</p>
+            <span class="go">↗</span>
+          </a>
+          <a class="business-item" href="#quote" data-reveal>
+            <span class="num">04</span>
+            <h3>Building Materials Trading</h3>
+            <p>Industrial and building-material supply support for procurement-driven operations.</p>
+            <span class="go">↗</span>
+          </a>
+          <a class="business-item" href="#quote" data-reveal>
+            <span class="num">05</span>
+            <h3>Equipment Spare Parts</h3>
+            <p>Spare-parts supply intended to support equipment availability and operational continuity.</p>
+            <span class="go">↗</span>
+          </a>
+          <a class="business-item" href="#quote" data-reveal>
+            <span class="num">06</span>
+            <h3>Fuel & Diesel Supply</h3>
+            <p>Support services for diesel and fuel requirements across project environments.</p>
+            <span class="go">↗</span>
+          </a>
+          <a class="business-item" href="#quote" data-reveal>
+            <span class="num">07</span>
+            <h3>Water Supply</h3>
+            <p>Industrial and project-oriented water supply support.</p>
+            <span class="go">↗</span>
+          </a>
+          <a class="business-item" href="#quote" data-reveal>
+            <span class="num">08</span>
+            <h3>Forklift Services</h3>
+            <p>Material-handling equipment for warehouses, sites and industrial operations.</p>
+            <span class="go">↗</span>
+          </a>
+          <a class="business-item" href="#quote" data-reveal>
+            <span class="num">09</span>
+            <h3>Boom Truck Services</h3>
+            <p>Specialized lifting and material-handling capability for field requirements.</p>
+            <span class="go">↗</span>
+          </a>
+          <a class="business-item" href="#quote" data-reveal>
+            <span class="num">10</span>
+            <h3>Industrial Support</h3>
+            <p>Additional operational support, including sewage-related services where required.</p>
+            <span class="go">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="editorial" id="capabilities">
+      <div class="wrap editorial-grid">
+        <div class="editorial-copy" data-reveal>
+          <p class="eyebrow">03 / Equipment & Capabilities</p>
+          <h2 class="big-title">Built around what keeps projects moving.</h2>
+          <p>Make the equipment feel tangible. The website should behave less like a service catalogue and more like a field-ready presentation of capability, equipment categories and response.</p>
+          <a class="outline-link" href="#quote">Request equipment <span class="arrow">↗</span></a>
+        </div>
+
+        <div class="editorial-visuals">
+          <figure class="visual-card wide" data-reveal="image">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1800&q=86" alt="Construction equipment at work" loading="lazy" />
+            <figcaption class="visual-meta"><span>Heavy Equipment</span><span>Field Capability</span></figcaption>
+          </figure>
+          <figure class="visual-card" data-reveal="image">
+            <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1600&q=86" alt="Industrial crane and project infrastructure" loading="lazy" />
+            <figcaption class="visual-meta"><span>Crane & Lifting</span><span>Project Support</span></figcaption>
+          </figure>
+          <figure class="visual-card wide" data-reveal="image">
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1800&q=86" alt="Warehouse logistics and material handling" loading="lazy" />
+            <figcaption class="visual-meta"><span>Logistics</span><span>Material Handling</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="capabilities" aria-labelledby="cap-title">
+      <div class="wrap">
+        <div class="section-label">
+          <span class="eyebrow">04 / Capability Matrix</span>
+          <span class="num">02—08</span>
+        </div>
+        <div class="cap-grid">
+          <div class="cap-title" data-reveal>
+            <h2 class="medium-title" id="cap-title">The practical side of the offer.</h2>
+          </div>
+          <div class="cap-list">
+            <div class="cap-row" data-reveal><span class="number">01</span><h3>Mobile cranes & lifting equipment</h3><span class="icon">↗</span></div>
+            <div class="cap-row" data-reveal><span class="number">02</span><h3>Forklifts & material handling</h3><span class="icon">↗</span></div>
+            <div class="cap-row" data-reveal><span class="number">03</span><h3>Trucks, trailers & project transportation</h3><span class="icon">↗</span></div>
+            <div class="cap-row" data-reveal><span class="number">04</span><h3>Heavy equipment & site support</h3><span class="icon">↗</span></div>
+            <div class="cap-row" data-reveal><span class="number">05</span><h3>Fuel, diesel & water support</h3><span class="icon">↗</span></div>
+            <div class="cap-row" data-reveal><span class="number">06</span><h3>Industrial & building-material supply</h3><span class="icon">↗</span></div>
+            <div class="cap-row" data-reveal><span class="number">07</span><h3>Equipment spare parts</h3><span class="icon">↗</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark projects" id="projects">
+      <div class="wrap">
+        <div class="section-label dark-line">
+          <span class="eyebrow dark-muted">05 / Projects & Experience</span>
+          <span class="num dark-muted">01—02</span>
+        </div>
+        <div class="projects-intro">
+          <h2 class="big-title" data-reveal>Project environments that demand more.</h2>
+          <p data-reveal>Public company material references equipment and industrial support connected with major Saudi development work. Present these references carefully, without inventing contracts, values or roles.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project" data-reveal>
+            <div class="project-media" data-reveal="image">
+              <img src="https://images.unsplash.com/photo-1541971875076-8f970d573be6?auto=format&fit=crop&w=1800&q=86" alt="Large-scale infrastructure under construction" loading="lazy" />
+            </div>
+            <div class="project-info">
+              <div>
+                <h3>NEOM / Major Development Context</h3>
+                <p>Present only verified company-reported project support and describe it as support to contractors where appropriate.</p>
+              </div>
+              <span class="project-tag">Saudi Arabia</span>
+            </div>
+          </article>
+
+          <article class="project" data-reveal>
+            <div class="project-media" data-reveal="image">
+              <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1500&q=84" alt="Modern project and operations environment" loading="lazy" />
+            </div>
+            <div class="project-info">
+              <div>
+                <h3>Red Sea / Infrastructure Context</h3>
+                <p>Use project mentions as experience context, not as unsupported claims about prime-contractor status.</p>
+              </div>
+              <span class="project-tag">Project Support</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="safety" id="safety">
+      <div class="wrap">
+        <div class="section-label">
+          <span class="eyebrow">06 / Safety & Quality</span>
+          <span class="num">03—06</span>
+        </div>
+        <div class="safety-grid">
+          <div class="safety-copy" data-reveal>
+            <h2 class="big-title">Operational discipline matters.</h2>
+            <p>For industrial B2B work, trust is earned in the details. Use this section to show safety-conscious operations, equipment readiness, reliability and professional field execution without manufacturing certifications or performance statistics.</p>
+          </div>
+          <div class="safety-points">
+            <article class="safety-point" data-reveal><span class="num">01</span><div><h3>Safety-conscious operations</h3><p>Make safety visible through people, PPE, site practice and equipment presentation.</p></div></article>
+            <article class="safety-point" data-reveal><span class="num">02</span><div><h3>Equipment readiness</h3><p>Present equipment as a practical business asset, not decorative machinery.</p></div></article>
+            <article class="safety-point" data-reveal><span class="num">03</span><div><h3>Reliable response</h3><p>Keep the interface focused on clear enquiry paths, service understanding and procurement use.</p></div></article>
+            <article class="safety-point" data-reveal><span class="num">04</span><div><h3>Long-term partnerships</h3><p>Use a corporate voice that feels relationship-led and suitable for repeat B2B work.</p></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote" id="quote">
+      <div class="wrap">
+        <div class="section-label dark-line">
+          <span class="eyebrow dark-muted">07 / Request a Quote</span>
+          <span class="num dark-muted">START A PROJECT</span>
+        </div>
+        <div class="quote-grid">
+          <div class="quote-copy" data-reveal>
+            <h2 class="big-title">Tell us what the project requires.</h2>
+            <p>Build the form around procurement: service, equipment type, project timing and a practical description. The aim is to create an enquiry that a sales team can actually work with.</p>
+          </div>
+          <form class="quote-form" id="quoteForm" data-reveal>
+            <div class="form-grid">
+              <div class="field"><label for="name">Full name</label><input id="name" name="name" autocomplete="name" required /></div>
+              <div class="field"><label for="company">Company</label><input id="company" name="company" autocomplete="organization" /></div>
+              <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
+              <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" autocomplete="tel" /></div>
+              <div class="field"><label for="service">Service required</label>
+                <select id="service" name="service">
+                  <option>Logistics & Transportation</option>
+                  <option>Heavy Equipment Rental</option>
+                  <option>Crane Rental</option>
+                  <option>Forklift / Material Handling</option>
+                  <option>Boom Truck</option>
+                  <option>Building Materials</option>
+                  <option>Equipment Spare Parts</option>
+                  <option>Fuel / Diesel Supply</option>
+                  <option>Water Supply</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="field"><label for="start">Project start</label><input id="start" name="start" type="date" /></div>
+              <div class="field full"><label for="message">Project details</label><textarea id="message" name="message" placeholder="Tell us about the location, equipment/service required, duration and any relevant project details."></textarea></div>
+            </div>
+            <div class="submit-row">
+              <button class="submit-btn" type="submit">Send enquiry ↗</button>
+              <span class="form-note" id="formNote">Connect this form to your preferred email/CRM endpoint.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="contact">
+      <div class="wrap">
+        <div class="section-label">
+          <span class="eyebrow">08 / Contact & FAQ</span>
+          <span class="num">OPEN CHANNELS</span>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-title" data-reveal>
+            <h2 class="medium-title">Clear answers. Fewer dead ends.</h2>
+          </div>
+          <div class="faq-list">
+            <div class="faq-item" data-reveal>
+              <button class="faq-q" type="button"><span>Where is Albilad Holding Company based?</span><span>+</span></button>
+              <div class="faq-a"><p>Albilad Holding Company is publicly listed in Jeddah, Makkah Region, Saudi Arabia.</p></div>
+            </div>
+            <div class="faq-item" data-reveal>
+              <button class="faq-q" type="button"><span>What services can I request?</span><span>+</span></button>
+              <div class="faq-a"><p>Requests can cover logistics and transportation, heavy equipment rental, crane rental, forklifts, boom trucks, industrial supply, building materials, spare parts, fuel/diesel, water and related support services.</p></div>
+            </div>
+            <div class="faq-item" data-reveal>
+              <button class="faq-q" type="button"><span>How should procurement teams start?</span><span>+</span></button>
+              <div class="faq-a"><p>Use the Request a Quote form with the service, location, timing and project details. For direct contact, call +966 54 445 3748 or email info@ucp.sa / sales@ucp.sa.</p></div>
+            </div>
+            <div class="faq-item" data-reveal>
+              <button class="faq-q" type="button"><span>Where can I follow company updates?</span><span>+</span></button>
+              <div class="faq-a"><p>Use the official LinkedIn company page for Albilad Holding Company and the public professional profile of Ahmed Banaweer.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="section-label dark-line">
+        <span class="eyebrow dark-muted">Albilad Holding Company</span>
+        <span class="num dark-muted">JEDDAH · SAUDI ARABIA</span>
+      </div>
+
+      <div class="footer-main">
+        <div class="footer-brand">
+          <h2>Move projects forward.</h2>
+          <p>Industrial capability across logistics, transportation, heavy equipment and related B2B support services.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Explore</h3>
+          <a href="#about">About</a>
+          <a href="#business">Business Areas</a>
+          <a href="#capabilities">Capabilities</a>
+          <a href="#projects">Projects</a>
+          <a href="#quote">Request a Quote</a>
+        </div>
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <p>+966 54 445 3748</p>
+          <p>info@ucp.sa</p>
+          <p>sales@ucp.sa</p>
+          <p>Jeddah, Saudi Arabia</p>
+        </div>
+        <div class="footer-col">
+          <h3>Online</h3>
+          <a href="https://albilad.sa/" target="_blank" rel="noreferrer">albilad.sa ↗</a>
+          <a href="https://ucp.sa/" target="_blank" rel="noreferrer">ucp.sa ↗</a>
+          <a href="https://www.linkedin.com/company/albilad-holding-company/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a href="https://www.linkedin.com/in/ahmed-banaweer-0616841ab/" target="_blank" rel="noreferrer">Ahmed Banaweer ↗</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Albilad Holding Company</span>
+        <span>Industrial capability. Reliable delivery.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const body = document.body;
+      const header = document.getElementById('header');
+      const menuBtn = document.getElementById('menuBtn');
+      const menuPanel = document.getElementById('menuPanel');
+      const langBtn = document.getElementById('langBtn');
+      const cursor = document.getElementById('cursor');
+      const form = document.getElementById('quoteForm');
+      const formNote = document.getElementById('formNote');
+      const year = document.getElementById('year');
+      let lastScroll = 0;
+
+      year.textContent = new Date().getFullYear();
+
+      window.addEventListener('load', () => {
+        body.classList.add('loaded');
+      });
+
+      function toggleMenu(open) {
+        const state = typeof open === 'boolean' ? open : !menuPanel.classList.contains('open');
+        menuPanel.classList.toggle('open', state);
+        menuPanel.setAttribute('aria-hidden', String(!state));
+        menuBtn.setAttribute('aria-expanded', String(state));
+        body.classList.toggle('menu-open', state);
+        menuBtn.innerHTML = state ? '<span class="menu-dot"></span> Close' : '<span class="menu-dot"></span> Menu';
+      }
+
+      menuBtn.addEventListener('click', () => toggleMenu());
+      menuPanel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
+
+      window.addEventListener('scroll', () => {
+        const y = window.scrollY;
+        header.classList.toggle('scrolled', y > 20);
+        if (y > lastScroll && y > 140 && !menuPanel.classList.contains('open')) {
+          header.style.transform = 'translateY(-120%)';
+        } else {
+          header.style.transform = 'translateY(0)';
+        }
+        lastScroll = y;
+      }, { passive: true });
+
+      // Editorial reveal system
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+
+      document.querySelectorAll('[data-reveal]').forEach((el, index) => {
+        el.style.transitionDelay = `${Math.min(index % 5, 4) * 55}ms`;
+        revealObserver.observe(el);
+      });
+      document.querySelectorAll('[data-reveal="image"]').forEach(el => revealObserver.observe(el));
+
+      // FAQ
+      document.querySelectorAll('.faq-item').forEach(item => {
+        const button = item.querySelector('.faq-q');
+        const answer = item.querySelector('.faq-a');
+        button.addEventListener('click', () => {
+          const open = item.classList.contains('open');
+          document.querySelectorAll('.faq-item.open').forEach(other => {
+            other.classList.remove('open');
+            other.querySelector('.faq-a').style.maxHeight = null;
+          });
+          if (!open) {
+            item.classList.add('open');
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+          }
+        });
+      });
+
+      // Demo form behavior. Replace with Formspree, Netlify Forms, a backend route, or CRM endpoint.
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        formNote.textContent = 'Demo form submitted. Connect this handler to your email or CRM endpoint.';
+        formNote.style.color = 'rgba(247,245,239,.72)';
+      });
+
+      // Language toggle: keeps the visual system intact while demonstrating the RTL switch.
+      let arabic = false;
+      const textMap = {
+        en: {
+          brand: 'HOLDING COMPANY',
+          menu: 'Menu',
+          close: 'Close'
+        },
+        ar: {
+          brand: 'شركة قابضة',
+          menu: 'القائمة',
+          close: 'إغلاق'
+        }
+      };
+
+      langBtn.addEventListener('click', () => {
+        arabic = !arabic;
+        document.documentElement.lang = arabic ? 'ar' : 'en';
+        document.documentElement.dir = arabic ? 'rtl' : 'ltr';
+        langBtn.textContent = arabic ? 'AR / EN' : 'EN / AR';
+
+        // Keep the demo bilingual without risking accidental invented translations.
+        // Add approved Arabic copy here when final Arabic content is signed off.
+        document.querySelector('.brand small').textContent = arabic ? textMap.ar.brand : textMap.en.brand;
+        if (!menuPanel.classList.contains('open')) {
+          menuBtn.innerHTML = `<span class="menu-dot"></span> ${arabic ? textMap.ar.menu : textMap.en.menu}`;
+        }
+      });
+
+      // Small magnetic cursor for desktop pointer devices.
+      if (window.matchMedia('(pointer:fine)').matches) {
+        body.classList.add('cursor-ready');
+        window.addEventListener('mousemove', (e) => {
+          cursor.style.left = e.clientX + 'px';
+          cursor.style.top = e.clientY + 'px';
+        }, { passive: true });
+        document.querySelectorAll('a, button, .visual-card, .business-item').forEach(el => {
+          el.addEventListener('mouseenter', () => cursor.classList.add('large'));
+          el.addEventListener('mouseleave', () => cursor.classList.remove('large'));
+        });
+      }
+
+      // Lightweight parallax on hero image, disabled for touch and reduced motion.
+      const heroImg = document.querySelector('.hero-media img');
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (heroImg && !reduceMotion && window.matchMedia('(pointer:fine)').matches) {
+        window.addEventListener('mousemove', (e) => {
+          const x = (e.clientX / window.innerWidth - .5) * 10;
+          const y = (e.clientY / window.innerHeight - .5) * 7;
+          heroImg.style.transform = `scale(1.08) translate(${x / 10}%, ${y / 10}%)`;
+        }, { passive: true });
+      }
+    })();
+  </script>
+</body>
+</html>
